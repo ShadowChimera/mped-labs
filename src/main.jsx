@@ -4,6 +4,7 @@ import './out-index.scss'
 
 import {
   createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from 'react-router-dom'
 
@@ -14,7 +15,7 @@ import Root, {
 } from './routes/Root'
 import Lab, { loader as labLoader } from './routes/Lab'
 
-const router = createBrowserRouter([
+const router = /* createBrowserRouter */ createHashRouter([
   {
     path: '/',
     element: <Root />,
