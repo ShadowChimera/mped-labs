@@ -3,19 +3,19 @@ import ReactDOM from 'react-dom/client'
 import './out-index.scss'
 
 import {
-  createBrowserRouter,
   createHashRouter,
   RouterProvider,
 } from 'react-router-dom'
 
 import ErrorPage from './routes/ErrorPage'
 import Root, {
+  RootPlaceholder,
   loader as rootLoader,
   action as rootAction,
 } from './routes/Root'
 import Lab, { loader as labLoader } from './routes/Lab'
 
-const router = /* createBrowserRouter */ createHashRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <Root />,
@@ -23,6 +23,14 @@ const router = /* createBrowserRouter */ createHashRouter([
     loader: rootLoader,
     action: rootAction,
     children: [
+      {
+        path: '/',
+        element: <RootPlaceholder />,
+      },
+      {
+        path: '/labs/',
+        element: <RootPlaceholder />,
+      },
       {
         path: '/labs/:labNumber',
         element: <Lab />,

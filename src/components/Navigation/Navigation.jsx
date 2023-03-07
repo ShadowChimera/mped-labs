@@ -3,7 +3,7 @@ import LabsList from './components/LabsList'
 
 function Navigation({ labsData }) {
   return (
-    <nav className="border border-solid border-gray-200 px-4 py-2 min-w-[320px]">
+    <nav className=" overflow-y-auto">
       {labsData.topics.map((topic, index) => (
         <NavigationSection
           key={`${index}.${topic.name}`}
