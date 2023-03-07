@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import '../dist/index.scss'
+import './out-index.scss'
 
 import {
   createBrowserRouter,
